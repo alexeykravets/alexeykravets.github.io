@@ -1,0 +1,8 @@
+node_modules
+psd
+dist
+sass
+*.sass
+gulpfile.js
+package.json
+package-lock.json
