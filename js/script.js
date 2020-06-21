@@ -32,4 +32,21 @@ $( document ).ready(function() {
     };
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    //MODAL
+    $('[data-modal=consultation]').on('click' , function(){
+        $('.overlay , #consultation').fadeIn();
+    });
+
+    $('[data-modal=order]').each(function(i){
+      $(this).on('click' , function(){
+        $('.modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay , #order').fadeIn();
+      });
+    });
+    
+    $('.modal__close').on('click' , function(){
+      $('.overlay , #consultation , #order , #thanks' ).fadeOut();
+    });
+
 });
